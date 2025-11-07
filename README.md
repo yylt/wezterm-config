@@ -170,7 +170,7 @@
     </details>
 
   - <details>
-    <summary>JetBrainsMono Nerd Font</summary>
+    <summary><del>JetBrainsMono Nerd Font</del></summary>
 
     Install with Homebrew (Macos)
 
@@ -191,6 +191,9 @@
     > - <https://www.nerdfonts.com/#home>
     > - <https://github.com/ryanoasis/nerd-fonts?#font-installation>
     </details/>
+
+  - <summary><b>NOW USE DEFAULT SHELL `bash`, DEFAULT FONT `JetBrains Mono`</b></summary>
+
 
 &nbsp;
 
@@ -252,7 +255,7 @@ Most of the key bindings revolve around a <kbd>SUPER</kbd> and <kbd>SUPER_REV</k
 
 &nbsp;
 
-#### Cursor Movements
+#### Cursor Movements (diabled)
 
 | Keys                                   | Action                                                     |
 | -------------------------------------- | ---------------------------------------------------------- |
@@ -270,7 +273,7 @@ Most of the key bindings revolve around a <kbd>SUPER</kbd> and <kbd>SUPER_REV</k
 | --------------------------------- | ------------------------------------- |
 | <kbd>SUPER</kbd>+<kbd>t</kbd>     | `SpawnTab` <sub>(DefaultDomain)</sub> |
 | <kbd>SUPER_REV</kbd>+<kbd>f</kbd> | `SpawnTab` <sub>(WSL:Ubuntu)</sub>    |
-| <kbd>SUPER_REV</kbd>+<kbd>w</kbd> | `CloseCurrentTab`                     |
+| <kbd>SUPER_REV</kbd>+<kbd>d</kbd> | `CloseCurrentTab`                     |
 
 ##### Tabs: Navigation
 
@@ -300,7 +303,6 @@ Most of the key bindings revolve around a <kbd>SUPER</kbd> and <kbd>SUPER_REV</k
 
 | Keys                          | Action               |
 | ----------------------------- | -------------------- |
-| <kbd>SUPER</kbd>+<kbd>n</kbd> | `SpawnWindow`        |
 | <kbd>SUPER</kbd>+<kbd>=</kbd> | Increase Window Size |
 | <kbd>SUPER</kbd>+<kbd>-</kbd> | Decrease Window Size |
 
@@ -320,26 +322,36 @@ Most of the key bindings revolve around a <kbd>SUPER</kbd> and <kbd>SUPER_REV</k
 | Keys                              | Action                |
 | --------------------------------- | --------------------- |
 | <kbd>SUPER</kbd>+<kbd>Enter</kbd> | `TogglePaneZoomState` |
-| <kbd>SUPER</kbd>+<kbd>w</kbd>     | `CloseCurrentPane`    |
+| <kbd>SUPER</kbd>+<kbd>d</kbd>     | `CloseCurrentPane`    |
 
 ##### Panes: Navigation
 
-| Keys                              | Action                  |
-| --------------------------------- | ----------------------- |
-| <kbd>SUPER_REV</kbd>+<kbd>k</kbd> | Move to Pane (Up)       |
-| <kbd>SUPER_REV</kbd>+<kbd>j</kbd> | Move to Pane (Down)     |
-| <kbd>SUPER_REV</kbd>+<kbd>h</kbd> | Move to Pane (Left)     |
-| <kbd>SUPER_REV</kbd>+<kbd>l</kbd> | Move to Pane (Right)    |
-| <kbd>SUPER_REV</kbd>+<kbd>p</kbd> | Swap with selected Pane |
+| Keys                                   | Action                  |
+| -------------------------------------- | ----------------------- |
+| <kbd>SUPER</kbd>+<kbd>UpArrow</kbd>    | Move to Pane (Up)       |
+| <kbd>SUPER</kbd>+<kbd>DownArrow</kbd>  | Move to Pane (Down)     |
+| <kbd>SUPER</kbd>+<kbd>LeftArrow</kbd>  | Move to Pane (Left)     |
+| <kbd>SUPER</kbd>+<kbd>RightArrow</kbd> | Move to Pane (Right)    |
+
+
 
 ##### Panes: Scroll Pane
 
 | Keys                          | Action                               |
 | ----------------------------- | ------------------------------------ |
-| <kbd>SUPER</kbd>+<kbd>u</kbd> | Scroll Lines up <sub>5 lines</sub>   |
-| <kbd>SUPER</kbd>+<kbd>d</kbd> | Scroll Lines down <sub>5 lines</sub> |
+| <kbd>SUPER</kbd>+<kbd>u</kbd> | Scroll Lines up <sub>10 lines</sub>   |
+| <kbd>SUPER</kbd>+<kbd>j</kbd> | Scroll Lines down <sub>10 lines</sub> |
 | <kbd>PageUp</kbd>             | Scroll Page up                       |
 | <kbd>PageDown</kbd>           | Scroll Page down                     |
+
+&nbsp;
+
+##### fonts: Zoom fonts
+
+| Keys                           | Action                  |
+| ------------------------------ | ----------------------- |
+| <kbd>SUPER</kbd>+<kbd>o</kbd>  | zoom out (Up)           |
+| <kbd>SUPER</kbd>+<kbd>i</kbd>  | zoom in (Down)          |
 
 &nbsp;
 
