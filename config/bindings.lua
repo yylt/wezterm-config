@@ -49,9 +49,9 @@ local keys = {
    },
 
    -- cursor movement --
-   { key = 'LeftArrow',  mods = mod.SUPER,     action = act.SendString '\u{1b}OH' },
-   { key = 'RightArrow', mods = mod.SUPER,     action = act.SendString '\u{1b}OF' },
-   { key = 'Backspace',  mods = mod.SUPER,     action = act.SendString '\u{15}' },
+   -- { key = '^',          mods = mod.SUPER,     action = act.SendString '\u{1b}OH' },
+   -- { key = '$',          mods = mod.SUPER,     action = act.SendString '\u{1b}OF' },
+   -- { key = 'Backspace',  mods = mod.SUPER,     action = act.SendString '\u{15}' },
 
    -- copy/paste --
    { key = 'c',          mods = 'CTRL|SHIFT',  action = act.CopyTo('Clipboard') },
@@ -61,7 +61,7 @@ local keys = {
    -- tabs: spawn+close
    { key = 't',          mods = mod.SUPER,     action = act.SpawnTab('DefaultDomain') },
    { key = 't',          mods = mod.SUPER_REV, action = act.SpawnTab({ DomainName = 'wsl:ubuntu-fish' }) },
-   { key = 'w',          mods = mod.SUPER_REV, action = act.CloseCurrentTab({ confirm = false }) },
+   { key = 'd',          mods = mod.SUPER,     action = act.CloseCurrentTab({ confirm = false }) },
 
    -- tabs: navigation
    { key = '[',          mods = mod.SUPER,     action = act.ActivateTabRelative(-1) },
@@ -78,7 +78,7 @@ local keys = {
 
    -- window --
    -- window: spawn windows
-   { key = 'n',          mods = mod.SUPER,     action = act.SpawnWindow },
+   -- { key = 'w',          mods = mod.SUPER,     action = act.SpawnWindow },
 
    -- window: zoom window
    {
@@ -177,22 +177,28 @@ local keys = {
 
    -- panes: zoom+close pane
    { key = 'Enter', mods = mod.SUPER,     action = act.TogglePaneZoomState },
-   { key = 'w',     mods = mod.SUPER,     action = act.CloseCurrentPane({ confirm = false }) },
+   { key = 'd',     mods = mod.SUPER,     action = act.CloseCurrentPane({ confirm = false }) },
 
    -- panes: navigation
-   { key = 'k',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Up') },
-   { key = 'j',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Down') },
-   { key = 'h',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Left') },
-   { key = 'l',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Right') },
-   {
-      key = 'p',
-      mods = mod.SUPER_REV,
-      action = act.PaneSelect({ alphabet = '1234567890', mode = 'SwapWithActiveKeepFocus' }),
-   },
+   { key = 'UpArrow',       mods = mod.SUPER, action = act.ActivatePaneDirection('Up') },
+   { key = 'DownArrow',     mods = mod.SUPER, action = act.ActivatePaneDirection('Down') },
+   { key = 'LeftArrow',     mods = mod.SUPER, action = act.ActivatePaneDirection('Left') },
+   { key = 'RightArrow',    mods = mod.SUPER, action = act.ActivatePaneDirection('Right') },
+   -- { key = 'k',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Up') },
+   -- { key = 'j',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Down') },
+   -- { key = 'h',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Left') },
+   -- { key = 'l',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Right') },
+   -- {
+   --    key = 'p',
+   --    mods = mod.SUPER,
+   --    action = act.PaneSelect({ alphabet = '1234567890', mode = 'SwapWithActiveKeepFocus' }),
+   -- },
 
    -- panes: scroll pane
-   { key = 'u',        mods = mod.SUPER, action = act.ScrollByLine(-5) },
-   { key = 'd',        mods = mod.SUPER, action = act.ScrollByLine(5) },
+   { key = 'u',        mods = mod.SUPER, action = act.ScrollByLine(-10) },
+   { key = 'PageUp',   mods = 'SHIFT',   action = act.ScrollByLine(-15) },
+   { key = 'j',        mods = mod.SUPER, action = act.ScrollByLine(10) },
+   { key = 'PageDown', mods = 'SHIFT',   action = act.ScrollByLine(15) },
    { key = 'PageUp',   mods = 'NONE',    action = act.ScrollByPage(-0.75) },
    { key = 'PageDown', mods = 'NONE',    action = act.ScrollByPage(0.75) },
 
@@ -217,6 +223,12 @@ local keys = {
          timemout_milliseconds = 1000,
       }),
    },
+
+   -- fonts --
+   -- fonts: resize
+   { key = "o", mods = mod.SUPER, action = act.IncreaseFontSize },
+   { key = "i", mods = mod.SUPER, action = act.DecreaseFontSize },
+   { key = "r", mods = mod.SUPER, action = act.ResetFontSize },
 }
 
 -- stylua: ignore
